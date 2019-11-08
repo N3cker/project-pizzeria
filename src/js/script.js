@@ -60,7 +60,7 @@
       thisProduct.data = data;  
     
       thisProduct.renderInMenu();
-      thisProduct.initAccordin();
+      thisProduct.initAccordion();
       console.log('new Product:', thisProduct);
     }
 
