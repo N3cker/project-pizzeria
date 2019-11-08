@@ -77,7 +77,7 @@
       menuContainer.appendChild(thisProduct.element);
     }
 
-    initAccordin(){
+    initAccordion(){
       const thisProcuct = this;
 
       /* find the clickable trigger (the element that should react to clicking) */
@@ -101,7 +101,7 @@
         /* END LOOP: for each active product */
 
       /* END: click event listener to trigger */
-      
+
       }
     }
   }
