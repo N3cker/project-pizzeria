@@ -68,15 +68,15 @@
     }
 
     renderInMenu(){
-    const thisProduct = this;
+      const thisProduct = this;
 
-    /* generTE HTML based on template */
+      /* generTE HTML based on template */
       const generatedHTML = templates.menuProduct(thisProduct.data);
-    /* create element using utils.createElementFromHTML */
+      /* create element using utils.createElementFromHTML */
       thisProduct.element = utils.createDOMFromHTML(generatedHTML);
-    /* find menu conteiner */
+      /* find menu conteiner */
       const menuContainer = document.querySelector(select.containerOf.menu);
-    /* add element to menu */
+      /* add element to menu */
       menuContainer.appendChild(thisProduct.element);
     }
 
@@ -96,7 +96,6 @@
       const thisProduct = this;
       /* START: click event listener to trigger */
       thisProduct.accordionTrigger.addEventListener('click', function(event) {
-        console.log('clicked')
         /* prevent default action for event */
         event.preventDefault();
         /* toggle active class on element of thisProduct */
@@ -117,7 +116,7 @@
         /* END LOOP: for each active product */
         }
       /* END: click event listener to trigger */
-      })
+      });
       
     }
 
