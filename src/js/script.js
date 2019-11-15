@@ -156,18 +156,18 @@
           if(optionSelected && !option.default){
             price += option.price;
           }
-          else if(!option.selected && option.default){
+          else if(!optionSelected && option.default){
             price -= option.price;
           }
 
-          const imageWrapperItems = thisProduct.imageWrapper.querySelector('.' + 'paramId' + '-' + 'optionId');
-
+          const imageWrapperItems = thisProduct.imageWrapper.querySelector('.' + paramId + '-' + optionId);
+          console.log('imageWrapperItems', imageWrapperItems);
           if(optionSelected && imageWrapperItems){
-            imageWrapperItems.classList.add('active');
+            imageWrapperItems.classList.add(classNames.menuProduct.imageVisible);
           }
-          else if(imageWrapperItems)
-            imageWrapperItems.classList.remove('active');
-                  
+          else if(imageWrapperItems){
+            imageWrapperItems.classList.remove(classNames.menuProduct.imageVisible);
+          }
         }
       }
       thisProduct.priceElem.innerHTML = price;
