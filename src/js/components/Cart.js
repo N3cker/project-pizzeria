@@ -108,7 +108,6 @@ class Cart{
     }
 
     thisCart.totalPrice = thisCart.subtotalPrice + thisCart.deliveryFee;
-    console.log('XD', thisCart.totalNumber, thisCart.subtotalPrice, thisCart.totalPrice);
     
     for(let key of thisCart.renderTotalKeys){
       for(let elem of thisCart.dom[key]){
