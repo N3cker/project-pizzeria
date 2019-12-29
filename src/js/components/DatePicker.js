@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /*eslint linebreak-style: ["error", "windows"]*/
 import BaseWidget from './BaseWidget.js';
 import utils from '../utils.js';
