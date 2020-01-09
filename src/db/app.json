@@ -206,8 +206,8 @@
   "event": [
     {
       "id": 1,
-      "date": "2020-01-03",
-      "hour": "12:30",
+      "date": "2020-01-09",
+      "hour": "21:30",
       "table": 1,
       "repeat": false,
       "duration": 4,
@@ -255,15 +255,5 @@
       "starters": ["lemonWater"]
     }
   ],
-  "booking": [
-    {
-      "id": 1,
-      "date": "2020-01-02",
-      "hour": "16:00",
-      "table": 1,
-      "duration": 3,
-      "ppl": 4,
-      "starters": ["water"]
-    }
-  ]
+  "booking": []
 }
