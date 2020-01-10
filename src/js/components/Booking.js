@@ -81,7 +81,7 @@ class Booking{
     
     for(let item of bookings){
       thisBooking.makeBooked(item.date, item.hour, item.duration, item.table);
-      console.log(item);
+      // console.log(item);
     }
 
     for(let item of eventsCurrent){
@@ -160,6 +160,9 @@ class Booking{
 
     for(let table of thisBooking.dom.tables){
       table.addEventListener('click', function(){
+        for(let table of thisBooking.dom.tables){
+          table.classList.remove('selected')
+        }
         table.classList.toggle('selected');
       });
     }
@@ -190,7 +193,7 @@ class Booking{
     const payload = {
       date: thisBooking.datePicker.value,
       hour: thisBooking.hourPicker.value,
-      table: [],
+      table: null,
       duration: thisBooking.hoursAmount.value,
       ppl: thisBooking.peopleAmount.value,
       starters: [],
@@ -204,18 +207,22 @@ class Booking{
       }
     }
 
-    for(let table of thisBooking.dom.tables){
-      if(table.classList.contains('selected')){
+    // for(let table of thisBooking.dom.tables){
+    //   if(table.classList.contains('selected')){
         
-        let tableId = table.getAttribute(settings.booking.tableIdAttribute);
+    //     let tableId = table.getAttribute(settings.booking.tableIdAttribute);
 
-        if (!isNaN(tableId)) {
-          tableId = parseInt(tableId);
-        }
-        table.classList.remove('selected');
-        payload.table.push(tableId);
-      }
-    }
+    //     if (!isNaN(tableId)) {
+    //       tableId = parseInt(tableId);
+    //     }
+    //     table.classList.remove('selected');
+    //     payload.table = tableId;
+    //   }
+    // }
+
+    const tableId = document.querySelector('.floor-plan .selected').getAttribute(settings.booking.tableIdAttribute);
+    payload.table = parseInt(tableId);
+    console.log(tableId);
 
     const options = {
       method: 'POST',
@@ -229,6 +236,8 @@ class Booking{
         return response.json();
       }).then(function(parsedResponse){
         console.log('parsedResponse', parsedResponse);
+        table.classList.remove('selected');
+        thisBooking.makeBooked(payload.date, payload.hour , payload.table , payload.duration);
       });
   }
 
@@ -273,7 +282,7 @@ class Booking{
     thisBooking.dom.submit.addEventListener('click', function(){
       event.preventDefault();
       thisBooking.sendBooked();
-      console.log('lolololol');
+      // console.log('lolololol');
     });
   }
 }
