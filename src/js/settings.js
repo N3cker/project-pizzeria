@@ -70,7 +70,7 @@ export const select = {
     submit: '[type="submit"]',
   },
   nav: {
-    links: '.main-nav a',
+    links: '.nav-link',
   },
 };
 

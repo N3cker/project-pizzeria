@@ -17,12 +17,8 @@
     <div class="container">
       <div class="header__wrapper">
         <div class="logo">
-          <h1 class="logo__title"><span>Mamma</span>Mia!</h1>
+          <a href="#mainPage" class="logo__title nav-link"><span>Mamma</span>Mia!</a>
           <h2 class="logo__subtitle">the best homemade Italian food</h2>
-        </div>
-        <div class="main-nav">
-          <a href="#order">Order</a>
-          <a href="#booking">Booking</a>
         </div>
         <div id="cart" class="cart">
           <div class="cart__summary">
@@ -62,19 +58,116 @@
   </header>
 
   <div id="pages">
+
+    <section id="mainPage">
+      <div class ="mainPage-wrapper container">
+
+        <div class="home-row"> <!-- row -->
+
+          <a href="#order" class="nav-link order-link link-ani">
+            <span>ORDER ONLINE</span>
+            <span>Delicioous food deliver to your door</span>
+          </a>
+          
+          <a href="#booking" class="nav-link book-link link-ani">
+            <span>BOOK A TABLE</span>
+            <span>Praesent non felis facilisis velit.</span>
+          </a>
+
+          <div class="opening">
+            <h2>OPENING HOURS</h2>
+            <p>TUE-SUN, 12PM-12AM</p>
+          </div>
+
+        </div> 
+
+        <div class="slick-carousel">
+
+          <div class="carousel-slide">
+            <div class="car-img">
+            </div>
+            <div class="car-text">
+              <h3>AMAZING SERVICE</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur at neque lacus. Nulla finibus at libero vel blandit. Vestibulum ante ipsum primis in faucibus.</p>
+              <p>~Margaret Osborne</p>
+            </div>
+          </div>
+
+
+          <div class="carousel-slide">
+            <div class="car-img">
+            </div>
+            <div class="car-text">
+              <h3>DELICIOUS FOOD</h3>
+              <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed in commodo tortor. Morbi lacinia vulputate efficitur. Morbi malesuada justo eget posuere placerat.</p>
+              <p>~Margaret Osborne</p>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="car-img">
+            </div>
+            <div class="car-text">
+              <h3>BEAUTIFUL PLACE</h3>
+              <p>Integer sed mauris hendrerit, facilisis erat et, dapibus arcu. Ut in aliquet arcu. Nam posuere enim eleifend est vestibulum, et luctus orci viverra. Maecenas.</p>
+              <p>~Margaret Osborne</p>
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="main-gallery">
+          
+          <div class="img-1 gallery-img">
+            <div>
+              <a href="#"><i class="fas fa-heart"></i></a>              
+              <a href="#"><i class="fas fa-share-alt"></i></a>
+            </div>
+          </div>
+          <div class="img-2 gallery-img">
+            <div>
+              <a href="#"><i class="fas fa-heart"></i></a>              
+              <a href="#"><i class="fas fa-share-alt"></i></a>
+            </div>
+          </div>
+          <div class="img-3 gallery-img">
+            <div>
+              <a href="#"><i class="fas fa-heart"></i></a>              
+              <a href="#"><i class="fas fa-share-alt"></i></a>
+            </div>
+          </div>
+          <div class="img-4 gallery-img">
+            <div>
+              <a href="#"><i class="fas fa-heart"></i></a>              
+              <a href="#"><i class="fas fa-share-alt"></i></a>
+            </div>
+          </div>
+          <div class="img-5 gallery-img">
+            <div>
+              <a href="#"><i class="fas fa-heart"></i></a>              
+              <a href="#"><i class="fas fa-share-alt"></i></a>
+            </div>
+          </div>
+          <div class="img-6 gallery-img">
+            <div>
+              <a href="#"><i class="fas fa-heart"></i></a>              
+              <a href="#"><i class="fas fa-share-alt"></i></a>
+            </div>
+          </div>
+            
+        </div>
+        <a href="#">View more on instagram</a>
+
+      </div>
+    </section>
+
     <section id="order">
       <div id="product-list" class="product-list container"></div>
     </section>
     <section id="booking">
       <div class="booking-wrapper container"></div>
     </section>
-  </div>
-
-  <div>
-    <section>
-      <div></div>
-    </section>
-  </div>
 
   <script id="template-booking-widget" type="text/x-handlebars-template">
     <div class="booking-widget">
@@ -249,9 +342,16 @@
     </article> <!-- .product -->
   </script>
   
+
+  
   <script src="vendor/range-slider.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+  <script src="./js/components/Carousel.js"></script>
   <script src="js/app.js" type="module"></script>
+  
 </body>
 </html>
