@@ -73,7 +73,7 @@ class Booking{
     const thisBooking = this;
 
     thisBooking.booked = {};
-    
+    console.log('XD', thisBooking);
     for(let item of bookings){
       thisBooking.makeBooked(item.date, item.hour, item.duration, item.table);
     }
@@ -143,6 +143,34 @@ class Booking{
         table.classList.add(classNames.booking.tableBooked);
       } else {
         table.classList.remove(classNames.booking.tableBooked);
+      }
+    }
+
+    let pickedDate = thisBooking.datePicker.correctValue;
+    const rangeDiv = document.querySelectorAll('.range-div');
+
+    if(!allAvainable) {
+      for(let key in thisBooking.booked[pickedDate]) {
+        let arrLength = Object.keys(thisBooking.booked[pickedDate][key]).length;
+        if(arrLength == 1) {
+          rangeDiv.forEach((e)=>{
+            if(e.getAttribute('data-hour') == key){
+              e.classList.add('range-green');
+            }
+          });
+        }else if(arrLength == 2) {
+          rangeDiv.forEach((e)=>{
+            if(e.getAttribute('data-hour') == key){
+              e.classList.add('range-yellow');
+            }
+          });
+        }else if(arrLength >= 3) {
+          rangeDiv.forEach((e)=>{
+            if(e.getAttribute('data-hour') == key){
+              e.classList.add('range-red');
+            }
+          });
+        }
       }
     }
   }

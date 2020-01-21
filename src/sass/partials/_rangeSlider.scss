@@ -1,0 +1,45 @@
+.range-background {
+    width: 290px;
+    height: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .range-div {
+        margin: 0;
+        padding: 0;
+        flex: 1;
+        width: 12px;
+        height: 12px;
+        background: rgb(3, 148, 3);
+        
+        &:first-child {
+            border-radius: 6px 0 0 6px;
+        }
+
+        &:last-child {
+            border-radius: 0 6px 6px 0;
+        }
+    }
+
+    .range-green {
+        background: rgb(3, 148, 3);
+    }
+
+    .range-yellow {
+        background: rgb(247, 176, 45);
+    }
+
+    .range-red {
+        background: rgb(209, 0, 0);
+    }
+
+}
+
+
+.rangeSlider__fill {
+    opacity: 0;
+}
+.rangeSlider {
+    background: none;
+}
