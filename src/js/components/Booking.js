@@ -151,25 +151,21 @@ class Booking{
     if(!allAvainable) {
       for(let key in thisBooking.booked[pickedDate]) {
         let arrLength = Object.keys(thisBooking.booked[pickedDate][key]).length;
-        if(arrLength == 1) {
-          rangeDiv.forEach((e)=>{
+        rangeDiv.forEach((e)=>{
+          if(arrLength == 1) {
             if(e.getAttribute('data-hour') == key){
               e.classList.add('range-green');
             }
-          });
-        }else if(arrLength == 2) {
-          rangeDiv.forEach((e)=>{
+          }else if(arrLength == 2) {
             if(e.getAttribute('data-hour') == key){
               e.classList.add('range-yellow');
-            }
-          });
-        }else if(arrLength >= 3) {
-          rangeDiv.forEach((e)=>{
+            }          
+          }else if(arrLength >= 3) {
             if(e.getAttribute('data-hour') == key){
               e.classList.add('range-red');
             }
-          });
-        }
+          }
+        });
       }
     }
   }
