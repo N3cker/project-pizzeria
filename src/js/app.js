@@ -108,7 +108,7 @@ const app = {
     thisApp.booking = new Booking(widgetContainer);
   },
 
-  init: function(){
+  init: async function(){
     const thisApp = this;
     // console.log('*** App starting ***');
     // console.log('thisApp:', thisApp);
@@ -119,7 +119,7 @@ const app = {
     thisApp.initPages();
     thisApp.initData();
     thisApp.initCart();
-    thisApp.initBooking();
+    await thisApp.initBooking();
   },
 };
 
