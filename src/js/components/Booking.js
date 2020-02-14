@@ -121,7 +121,7 @@ class Booking{
 
     thisBooking.hour = utils.hourToNumber(thisBooking.hourPicker.value);
 
-    const hours = ['12', '12.5', '13', '13.5', '14', '14.5', '15', '15.5', '16', '16.5', '17', '17.5', '18', '18.5', '19', '19.5', '20', '20.5', '21', '21.5', '22', '22.5', '23', '23.5'];
+    const hours = settings.hours.hoursOC;
 
     const rangeBackground = document.querySelector('.range-background');
     rangeBackground.innerHTML = '';
@@ -168,7 +168,6 @@ class Booking{
     }     
 
     let pickedDate = thisBooking.datePicker.correctValue;
-    console.log(thisBooking.booked[pickedDate]);
     
     thisBooking.rangeBackg();
     const rangeDivs = document.querySelectorAll('.range-div');
@@ -178,7 +177,6 @@ class Booking{
       if(thisBooking.booked[pickedDate][hour]) {
         status = Object.keys(thisBooking.booked[pickedDate][hour]).length;
       }
-      console.log(status);
       switch(status) {
       case 1:
         rangeDiv.classList.add('range-green');
