@@ -29,7 +29,7 @@
     "license": "ISC",
     "dependencies": {
         "@glidejs/glide": "^3.4.1",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "json-server": "^0.15.1",
         "slick-carousel": "^1.8.1"
     },
